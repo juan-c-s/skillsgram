@@ -1,0 +1,34 @@
+# Ignore local development files and directories
+__pycache__/
+.env
+.env.local
+.env.*.local
+*.sqlite
+
+# Ignore node modules for React
+node_modules/
+
+# Ignore compiled files
+build/
+*.log
+*.pyc
+
+# Ignore editor specific files
+.vscode/
+*.swp
+*.swo
+
+# Ignore logs and other generated files
+logs/
+*.log
+*.log.*
+*.access.log
+
+# Ignore .DS_Store files on macOS
+.DS_Store
+
+# Ignore temporary files
+*.tmp
+
+# Ignore any local configuration files
+*.conf

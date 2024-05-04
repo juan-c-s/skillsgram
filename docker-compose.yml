@@ -1,0 +1,61 @@
+---
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:13.1-alpine
+    volumes:
+      - database:/var/lib/postgresql/data
+    networks:
+      - connection
+    environment:
+      - POSTGRES_PASSWORD=local-password
+      - POSTGRES_DB=software-engineering
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  fastapi:
+    build:
+      context: ./backend/
+    command: >
+      bash -c "uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - connection
+    ports:
+      - "8000:8000"
+    expose:
+      - "8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - NAME=software-engineering
+      - USER=postgres
+      - PASSWORD=local-password
+      - HOST=postgres
+      - PORT=5432
+
+  react:
+    build:
+      context: frontend
+    command: npm start
+    depends_on:
+      - fastapi
+    networks:
+      - connection
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules/
+
+networks:
+  connection:
+
+volumes:
+  database:
