@@ -14,9 +14,12 @@ const LoginPage = () => {
 
   const onSubmit = async(data : UserLogin) => {
     console.log(data)
-    const response:User = await getUserByEmail(data)
+    const response:User = await getUserByEmail(data.email)
+    console.log(response)
+    console.log(response.hashed_password)
+    console.log(data.password)
     if(response.hashed_password == hash(data.password)){
-      navigate("/profile", {state:{user:response}})
+      navigate(`/profile/${response.id}`)
     }else{
       setError("password",{
         type: "Incorrect",

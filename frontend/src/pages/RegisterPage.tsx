@@ -17,8 +17,8 @@ const RegisterPage = () => {
   const onSubmit = async(data:UserCreate) => {
     try{
         const user = await createUser(data)
-        console.log(user)
-        navigate("/profile", {state:{user}})
+        navigate(`/profile/${user.id}`)
+
     }catch(e){
         console.log(e)
     }

@@ -35,16 +35,20 @@ def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     return crud.create_user(db=db, user=user)
 
 
+@app.get("/users/email/{email}")
+def read_user_email(email : str, db: Session = Depends(get_db)):
+    user = crud.get_user_by_email(db, email)
+    return user
+
+@app.get("/users/id/{id}")
+def read_user_id(id : int, db: Session = Depends(get_db)):
+    user = crud.get_user(db, id)
+    return user
+
 @app.get("/users/", response_model=list[schemas.User])
 def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     users = crud.get_users(db, skip=skip, limit=limit)
     return users
-
-@app.get("/users/{email}")
-def read_user(email : str, db: Session = Depends(get_db)):
-    user = crud.get_user_by_email(db, email)
-    return user
-
 
 
 ## Esto hace que FastApi permita recibir requests de localhost

@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -22,8 +23,11 @@ export default function Header() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Skillsgram
+           <Link to={"/home"}>
+              Skillsgram
+            </Link>
           </Typography>
+
           <Button href='/' color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
