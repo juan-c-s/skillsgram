@@ -63,19 +63,21 @@ This guide will walk you through the steps to clone a repository from the comman
     cd skillsgram
     ```
 
-This repo has 2 main folders: frontend/ and backend/. 
-**Frontend/** folder has all the visual part of the app in React.js.
-**Backend/** folder has server-side part of the app in FastApi.
-
-## 2. Run Docker Build
+## 3. Run Docker Build
 This step will take a little long because it will install all the project's dependencies
 ```bash
 docker compose build
 ```
 Wait for about 3-5 minutes, time for a stretch
 
-## 3 Run the project
+## 4. Run the project
 Execute this command to set up the project
 ```bash
 docker compose up
+```
+
+## 5. Project Ready
+Go to your browser and go to the following page
+```bash
+http://localhost:3000/
 ```
