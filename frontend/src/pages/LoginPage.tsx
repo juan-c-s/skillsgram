@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Header from "../layout/Header";
 
 import { useNavigate } from "react-router-dom";
-import { User, UserLogin } from "../types";
+import { User, UserLogin } from "../types/user";
 import { getUserByEmail } from "../crud/users";
 import { hash } from "../utils";
 const LoginPage = () => {
@@ -13,11 +13,8 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const onSubmit = async(data : UserLogin) => {
-    console.log(data)
     const response:User = await getUserByEmail(data.email)
-    console.log(response)
-    console.log(response.hashed_password)
-    console.log(data.password)
+    console.log("Logged In")
     if(response.hashed_password == hash(data.password)){
       navigate(`/profile/${response.id}`)
     }else{

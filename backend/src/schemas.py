@@ -15,10 +15,23 @@ class UserBase(BaseModel):
 class UserCreate(UserBase):
     password: str
 
+class SkillCreate(BaseModel):
+    name : str
+    years_experience: int
+    category : str
+
+class Skill(SkillCreate):
+    id : int
+
+    class Config:
+        from_attributes = True
+        
 class User(UserBase):
     id: int
     hashed_password : str
-    skills: Optional[list[str]]  = []
+    skills: list[Skill]  = []
     
     class Config:
-        orm_mode = True
+        from_attributes = True #was orm_mod before
+
+        

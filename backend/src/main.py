@@ -40,15 +40,33 @@ def read_user_email(email : str, db: Session = Depends(get_db)):
     user = crud.get_user_by_email(db, email)
     return user
 
-@app.get("/users/id/{id}")
+@app.get("/users/id/{id}", response_model=schemas.User)
 def read_user_id(id : int, db: Session = Depends(get_db)):
     user = crud.get_user(db, id)
     return user
+
+@app.get("/users/skills/{user_id}", response_model=list[schemas.Skill])
+def read_user_skills(user_id : int, db: Session = Depends(get_db)):
+    return crud.get_user_skills(db, user_id)
 
 @app.get("/users/", response_model=list[schemas.User])
 def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     users = crud.get_users(db, skip=skip, limit=limit)
     return users
+
+
+@app.post("/skills/{user_id}", response_model=schemas.Skill)
+def add_skill(skill: schemas.SkillCreate, user_id: int, db: Session = Depends(get_db)):
+    db_skill = crud.get_skill_by_name(db, name=skill.name)
+    if not db_skill:
+        db_skill = crud.create_skill(db=db, skill=skill)
+    return crud.add_skill_to_user(db, user_id, db_skill)
+
+
+@app.get("/skills/", response_model=list[schemas.Skill])
+def read_skills(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    skills = crud.get_skills(db, skip=skip, limit=limit)
+    return skills
 
 
 ## Esto hace que FastApi permita recibir requests de localhost

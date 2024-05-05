@@ -1,9 +1,9 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import Tile from "./Tile";
-import { TileProps } from "../types";
+import { TileProps } from "../types/user";
 
-const TileGrid: React.FC<{ tiles: TileProps[] | undefined}> = ({ tiles }) => {
+const TileGrid: React.FC<{ tiles: TileProps[] }> = ({ tiles }) => {
   return (
     <Grid container spacing={3}>
       {tiles && tiles.map((tile, index) => (

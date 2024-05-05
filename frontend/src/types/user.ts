@@ -1,3 +1,4 @@
+import { Skill, SkillCreate } from "./skill";
 
 
 export type UserCreate = {
@@ -19,7 +20,7 @@ export type User = {
     position : string
     avatar_url: string
     year_entered: number
-    skills : string[]
+    skills : Skill[]
 }
 
 export type UserLogin = {
@@ -28,15 +29,13 @@ export type UserLogin = {
 }
 
 
-
-
-
 export type TileProps ={
     name: string,
     company: string,
     position: string,
     year_entered: number,
-    avatar_url: string
+    avatar_url: string,
+    id : number,
   }
   
 

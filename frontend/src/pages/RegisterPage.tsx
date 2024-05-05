@@ -4,7 +4,7 @@ import { TextField, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Header from "../layout/Header";
 import {createUser} from "../crud/users"
-import { UserCreate } from "../types";
+import { UserCreate } from "../types/user";
 
 const RegisterPage = () => {
   const {
