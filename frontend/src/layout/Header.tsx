@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function Header() {
   return (
@@ -20,7 +21,9 @@ export default function Header() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+           <Link to={"/home"}>
+            <HomeIcon />
+            </Link>
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
            <Link to={"/home"}>

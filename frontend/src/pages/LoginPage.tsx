@@ -13,16 +13,27 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const onSubmit = async(data : UserLogin) => {
-    const response:User = await getUserByEmail(data.email)
-    // console.log("Logged In")
-    if(response.hashed_password == hash(data.password)){
-      navigate(`/profile/${response.id}`)
-    }else{
-      setError("password",{
-        type: "Incorrect",
-      })
+    try{
+      const response:User = await getUserByEmail(data.email)
+      // console.log("Logged In")
+      if(response && response.hashed_password == hash(data.password)){
+        navigate(`/profile/${response.id}`)
+      }else{
+        if(response){
+          setError("password",{
+            message: "Incorrect Password",
+          })
+        }else{
+          setError("password",{
+            message: "User does not exist",
+          })
+
+        }
+      }
+
+    }catch(error){
+      console.error(error)
     }
-    // Perform login action with form data
   };
 
   return (
@@ -60,7 +71,7 @@ const LoginPage = () => {
                   autoComplete="current-password"
                 />
                 {errors.password &&
-                <p className="text-red-500"> Password is {errors.password.type }</p>}
+                <p className="text-red-500"> {errors.password.message }</p>}
               </div>
             </div>
 

@@ -19,33 +19,42 @@ https://www.docker.com/get-started/
 8. Select Finish and enter password
 
 ## 2. Clone the repo
+
 Cloning the app refers to copying the remote repository to your own computer. Think of it as downloading a google drive file
 
-1. Github Desktop App cloning
-If you don't have the github desktop app, refer to the GithubCLI guide or download the app at:
-```bash
-https://desktop.github.com/
-```
-Go to the following link to have access to the project. 
+### Cloning a Repository using GitHub Desktop
+
+#### Prerequisites
+- GitHub desktop app downloaded on your device. If you don't have the app, refer to the GithubCLI (Commmand Line Interface) guide using the terminal or download the app at:
+    ```bash
+    https://desktop.github.com/
+    ```
+- Visual Studio Code app downloaded. If you don't have the app, download it going to the following link
+    ```sh
+    https://code.visualstudio.com/download
+    ```
+
+#### Steps
+1. Go to the following link to have access to the project. 
 ```bash
 https://github.com/juan-c-s/skillsgram
 ```
-- click on the **clone** button and select "Open with github Desktop"
-- Once you have github Desktop App open, it will prompt you to clone the repository. Click on the **clone** button
-- You should have the skillsgram respository selected on your github app.
-- Go ahead and click **Open in Visual Studio Code**
-- If you don't have Visual Studio Code app, download it going to the following link
-```sh
-https://code.visualstudio.com/download
-```
-2. Github CLI cloning
+2. click on the **clone** button and select "Open with github Desktop"
+3. Once you have github Desktop App open, it will prompt you to clone the repository. Click on the **clone** button
+4. You should have the skillsgram respository selected on your github app.
+5. Go ahead and click **Open in Visual Studio Code**
+
+
 ### Cloning a Repository from Command Line using Git
 This guide will walk you through the steps to clone a repository from the command line using Git.
 
 #### Prerequisites
 
 - Git installed on your system. You can download and install Git from the [official website](https://git-scm.com/).
-
+- If you don't have Visual Studio Code app, download it going to the following link
+```sh
+https://code.visualstudio.com/download
+```
 #### Steps
 
 1. **Open your Terminal or Command Prompt**: Open your terminal or command prompt application. This could be Terminal on macOS, Command Prompt or PowerShell on Windows, or any terminal emulator on Linux.
@@ -58,13 +67,12 @@ This guide will walk you through the steps to clone a repository from the comman
     ```bash
     git clone https://github.com/juan-c-s/skillsgram
     ```
-4. Change Directory with 
-    ```bash
-    cd skillsgram
-    ```
 
 ## 3. Run Docker Build
-This step will take a little long because it will install all the project's dependencies
+1. Open new terminal at folder. Drag and drop skillsgram folder to the Visual Studio Code app.
+2. Right click in the file Explorer below the last file or folder. Click on Open on Integrated Terminal. Another way is using the menu app bar where you can access File, Edit or View items. There is one called Terminal. Hover over Terminal and click **New Terminal**
+
+3. This step will take a little long because it will install all the project's dependencies or files needed to run project.
 ```bash
 docker compose build
 ```
@@ -77,7 +85,8 @@ docker compose up
 ```
 
 ## 5. Project Ready
-Go to your browser and go to the following page
+Open your browser and go to the following page
 ```bash
 http://localhost:3000/
 ```
+You should now be in the login Page.

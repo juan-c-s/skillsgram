@@ -12,7 +12,9 @@ const RegisterPage = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<UserCreate>();
+  } = useForm<UserCreate>({
+    defaultValues:{avatar_url: 'https://thumbs.dreamstime.com/b/default-profile-picture-avatar-photo-placeholder-vector-illustration-default-profile-picture-avatar-photo-placeholder-vector-189495158.jpg'}
+  });
   const navigate = useNavigate();
   const onSubmit = async(data:UserCreate) => {
     try{
@@ -102,7 +104,7 @@ const RegisterPage = () => {
               <TextField
                 fullWidth
                 id="avatar_url"
-                {...register("avatar_url", { required: true })}
+                {...register("avatar_url", { required: false })}
                 type="text"
                 required
                 label="Avatar URL"
