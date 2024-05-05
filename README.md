@@ -69,7 +69,7 @@ https://code.visualstudio.com/download
     ```
 
 ## 3. Run Docker Build
-1. Open new terminal at folder. Drag and drop skillsgram folder to the Visual Studio Code app.
+1. Open new file explorer and drag and drop your skillsgram folder to the Visual Studio Code app.
 2. Right click in the file Explorer below the last file or folder. Click on Open on Integrated Terminal. Another way is using the menu app bar where you can access File, Edit or View items. There is one called Terminal. Hover over Terminal and click **New Terminal**
 
 3. This step will take a little long because it will install all the project's dependencies or files needed to run project.
