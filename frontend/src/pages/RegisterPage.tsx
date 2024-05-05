@@ -20,7 +20,7 @@ const RegisterPage = () => {
         navigate(`/profile/${user.id}`)
 
     }catch(e){
-        console.log(e)
+        console.error(e)
     }
     // navigate("/profile")
   };

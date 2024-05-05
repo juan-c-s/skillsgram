@@ -14,7 +14,7 @@ const LoginPage = () => {
 
   const onSubmit = async(data : UserLogin) => {
     const response:User = await getUserByEmail(data.email)
-    console.log("Logged In")
+    // console.log("Logged In")
     if(response.hashed_password == hash(data.password)){
       navigate(`/profile/${response.id}`)
     }else{

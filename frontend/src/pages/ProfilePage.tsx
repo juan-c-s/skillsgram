@@ -36,7 +36,7 @@ function ProfilePage() {
         const fetchUserData = async () => {
             try {
                 const userData : User = await getUserByID(Number(param.id));
-                console.log("Reading Users...")
+                // console.log("Reading Users...")
                 if (userData) {
                     setUser(userData);
                     setChartData(userData.skills.map(skill=>skill.years_experience))
@@ -60,7 +60,7 @@ function ProfilePage() {
     const onSubmit =async(data: SkillCreate)=>{
         try{
             const skill: Skill= await addSkill(data, Number(param.id))
-            console.log(user.skills)
+            // console.log(user.skills)
             setUser(
                 {
                     ...user,
