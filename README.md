@@ -19,19 +19,26 @@ https://www.docker.com/get-started/
 8. Select Finish and enter password
 
 ## 2. Clone the repo
-1. If you have the github Desktop app, go to the following link to have access to the project. 
+Cloning the app refers to copying the remote repository to your own computer. Think of it as downloading a google drive file
+
+1. Github Desktop App cloning
+If you don't have the github desktop app, refer to the GithubCLI guide or download the app at:
+```bash
+https://desktop.github.com/
+```
+Go to the following link to have access to the project. 
 ```bash
 https://github.com/juan-c-s/skillsgram
 ```
 - click on the **clone** button and select "Open with github Desktop"
 - Once you have github Desktop App open, it will prompt you to clone the repository. Click on the **clone** button
-- You should have the respository selected on your github app.
+- You should have the skillsgram respository selected on your github app.
 - Go ahead and click **Open in Visual Studio Code**
 - If you don't have Visual Studio Code app, download it going to the following link
 ```sh
 https://code.visualstudio.com/download
 ```
-2. If you are using Github CLI
+2. Github CLI cloning
 ### Cloning a Repository from Command Line using Git
 This guide will walk you through the steps to clone a repository from the command line using Git.
 
