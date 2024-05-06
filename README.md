@@ -18,6 +18,7 @@ https://www.docker.com/get-started/
 7. From the installation window, select Use recommended settings (Requires password).
 8. Select Finish and enter password
 
+
 ## 2. Clone the repo
 
 Cloning the app refers to copying the remote repository to your own computer. Think of it as downloading a google drive file
@@ -107,7 +108,7 @@ This page will have your profile which you registered earlier and at the right s
 
 /home
 This page will have a grid of the users created until now, each profile description has a link to profile button to redirect to its profile page. 
-![Screenshot 2024-05-06 at 10 45 13 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/a3e93384-5ba3-4561-a4a0-f3dbc139542d)
+![Screenshot 2024-05-06 at 11 04 52 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/94823211-2841-4f2c-88c4-1db2010d6c17)
 
 
 To Improve:
