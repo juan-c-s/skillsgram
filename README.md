@@ -90,24 +90,24 @@ Open your browser and go to the following page
 ```bash
 http://localhost:3000/
 ```
-You should now be in the login Page.
+#### You should now be in the login Page.
 
 
 /
-This is the login page, if not register, click on create account
+- This is the login page, if not register, click on create account
 ![Screenshot 2024-05-06 at 10 56 32 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/b179bfc5-af39-4e52-97af-cb4dabad8a66)
 
 /register
-There is a random image generator link in case you do not have a profile image link available. Fill in the details and click register. You should now be headed to the new user's profile page.
+- There is a random image generator link in case you do not have a profile image link available. Fill in the details and click register. You should now be headed to the new user's profile page.
 ![Screenshot 2024-05-06 at 10 57 17 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/21c3fff6-0136-4800-b381-6928fcf0a4c2)
 
 
 /profile:id
-This page will have your profile which you registered earlier and at the right side, you will have a **spider chart** of your skills. Since you don't have skills yet, it is empty. Below the chart, you can add skills to associate to the profile id of current user profile page. When you click on **Add Skill**, the **spider chart** will update
+- This page will have your profile which you registered earlier and at the right side, you will have a **spider chart** of your skills. Since you don't have skills yet, it is empty. Below the chart, you can add skills to associate to the profile id of current user profile page. When you click on **Add Skill**, the **spider chart** will update
 ![Screenshot 2024-05-06 at 10 47 36 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/b8d69b62-3e8b-4a18-b1b2-399bd8513136)
 
 /home
-This page will have a grid of the users created until now, each profile description has a link to profile button to redirect to its profile page. 
+- This page will have a grid of the users created until now, each profile description has a link to profile button to redirect to its profile page. 
 ![Screenshot 2024-05-06 at 11 04 52 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/94823211-2841-4f2c-88c4-1db2010d6c17)
 
 
