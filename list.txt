@@ -1,0 +1,37 @@
+[           {
+                "name": "FastApi",
+                "years_experience": 3,
+                "category": "Backend",
+                "id": 1
+            },
+            {
+                "name": "Django",
+                "years_experience": 2,
+                "category": "Backend",
+                "id": 2
+            },
+            {
+                "name": "Jest",
+                "years_experience": 5,
+                "category": "Testing Framework",
+                "id": 3
+            },
+            {
+                "name": "Docker Swarm",
+                "years_experience": 4,
+                "category": "Containers",
+                "id": 4
+            },
+            {
+                "name": "Cyprus",
+                "years_experience": 5,
+                "category": "Testing Framework",
+                "id": 7
+            },
+            {
+                "name": "HardHat",
+                "years_experience": 1,
+                "category": "Testing Framework",
+                "id": 8
+            }
+]

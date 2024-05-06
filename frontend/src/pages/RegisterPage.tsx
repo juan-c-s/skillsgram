@@ -13,7 +13,7 @@ const RegisterPage = () => {
     formState: { errors },
     reset,
   } = useForm<UserCreate>({
-    defaultValues:{avatar_url: 'https://thumbs.dreamstime.com/b/default-profile-picture-avatar-photo-placeholder-vector-illustration-default-profile-picture-avatar-photo-placeholder-vector-189495158.jpg'}
+    defaultValues:{avatar_url: 'https://xsgames.co/randomusers/avatar.php?g=male'}
   });
   const navigate = useNavigate();
   const onSubmit = async(data:UserCreate) => {
