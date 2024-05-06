@@ -97,10 +97,8 @@ This is the login page, if not register, click on create account
 ![Screenshot 2024-05-06 at 10 56 32 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/b179bfc5-af39-4e52-97af-cb4dabad8a66)
 
 /register
-There is a random image generator link in case you do not have a profile image link available. Fill in the details and click register you should be headed to your profile page.
+There is a random image generator link in case you do not have a profile image link available. Fill in the details and click register. You should now be headed to the new user's profile page.
 ![Screenshot 2024-05-06 at 10 57 17 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/21c3fff6-0136-4800-b381-6928fcf0a4c2)
-
-
 
 
 /profile:id
@@ -112,10 +110,15 @@ This page will have a grid of the users created until now, each profile descript
 ![Screenshot 2024-05-06 at 10 45 13 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/a3e93384-5ba3-4561-a4a0-f3dbc139542d)
 
 
-Improvement:
+To Improve:
 - Authentication + middleware + Authenticating Navigation with token would improve security
 - Create an Admin page for the company with analytics about skills
 - Make an autocomplete field when adding a skill. This could help to reduce the repeated skills on the db
 - Create a db seeder to initialize it with data
 - Make the design responsive
+- Improving UX experience with some toasts or loading indicators
+- If application scales, using redis for cache
+- Having a cloud SQL service and deploying application in the cloud.
+- Using nGinx to have a load balancer solution for the app
+
 
