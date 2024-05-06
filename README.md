@@ -92,4 +92,28 @@ http://localhost:3000/
 You should now be in the login Page.
 
 
+/
+This is the login page, if not register, click on create account
+![Screenshot 2024-05-06 at 10 43 45 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/44250221-aecd-4f3d-9e11-1bc6bc64b7c4)
+
+/register
+![Screenshot 2024-05-06 at 10 44 06 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/68bbdbb1-316a-4041-800f-033396bcac10)
+There is a random image generator link in case you do not have a profile image link available. Fill in the details and click register you should be headed to your profile page.
+
+
+/profile:id
+![Screenshot 2024-05-06 at 10 47 36 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/b8d69b62-3e8b-4a18-b1b2-399bd8513136)
+This page will have your profile which you registered earlier and at the right side, you will have a **spider chart** of your skills. Since you don't have skills yet, it is empty. Below the chart, you can add skills to associate to the profile id of current user profile page. When you click on **Add Skill**, the **spider chart** will update
+
+/home
+![Screenshot 2024-05-06 at 10 45 13 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/a3e93384-5ba3-4561-a4a0-f3dbc139542d)
+This page will have a grid of the users created until now, each profile description has a link to profile button to redirect to its profile page. 
+
+
+Improvement:
+- Authentication + middleware + Authenticating Navigation with token would improve security
+- Create an Admin page for the company with analytics about skills
+- Make an autocomplete field when adding a skill. This could help to reduce the repeated skills on the db
+- Create a db seeder to initialize it with data
+- Make the design responsive
 
