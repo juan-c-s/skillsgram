@@ -94,7 +94,7 @@ http://localhost:3000/
 
 
 /
-- This is the login page, if not register, click on create account
+- This is the login page, if you do not have an account, click on create account
 ![Screenshot 2024-05-06 at 10 56 32 AM](https://github.com/juan-c-s/skillsgram/assets/63207344/b179bfc5-af39-4e52-97af-cb4dabad8a66)
 
 /register
